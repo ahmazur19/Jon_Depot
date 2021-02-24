@@ -8,12 +8,23 @@
 
 require "faker"
 
+Department.destroy_all
+Item.destroy_all
+
 10.times do 
-	Department.create(
+	dep = Department.create(
 		name: Faker::Construction.subcontract_category,
 
 	)
+	3.times do
+		dep.items.create(
+			name: Faker::Construction.heavy_equipment,
+			price: Faker::Commerce.price,
+			brand: Faker::Appliance.brand,
 
+	)
+	end
 end
 
 puts "seeded #{Department.all.size} departments"
+puts "seeded #{Item.all.size} items"
