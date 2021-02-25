@@ -7,4 +7,27 @@ class ItemsController < ApplicationController
 		render component: "Item", props: {item: @item, department: @department}
 	end
 	
+
+	def new
+		render component: "ItemForm"
+	end
+
+
+	def create
+	end
+
+
+	def edit
+		render component: "ItemForm"
+	end
+
+
+	def update
+	end
+
+
+	def destroy
+	end
+
+
 end
