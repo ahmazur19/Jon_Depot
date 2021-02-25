@@ -7,7 +7,11 @@ def index
 end
 
 def show
-	render component: "Department"
+  @department = Department.find(params[:id])
+  
+  @items = @department.items
+
+	render component: "Department", props: {department: @department, items: @items}
 end
 
 def new
