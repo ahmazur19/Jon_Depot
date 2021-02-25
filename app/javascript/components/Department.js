@@ -21,8 +21,6 @@ const Department = (props) => {
     })
   }
 
-
-
 	return (
 		<div>
 			<h1 className="header"> Jon Depot</h1>
