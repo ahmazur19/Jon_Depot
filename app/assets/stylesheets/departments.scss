@@ -12,14 +12,14 @@
 
 .viewport-container {
 	margin: auto;
-	font-family: 'Lobster', cursive;
-	color: black;
 	// background-color: orange;
 	min-height: 100vh;
 }
 
 *{
 	background-color: orange;
+	color: black;
+	font-family: 'Lobster', cursive;
 }
 
 .deps-container {
@@ -27,5 +27,14 @@
 }
 
 .dep-container {
+	padding: 10px;
 	margin: 3em;
+	box-shadow: 3px 3px 3px 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.dep-container a {
+	text-decoration: none;
 }

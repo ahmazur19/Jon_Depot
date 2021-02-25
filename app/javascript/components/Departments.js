@@ -8,13 +8,13 @@ const Departments = (props) => {
       return(
         <div className="dep-container">
           <h2>{department.name}</h2>
-					<a href={`/departments/${department.id}`}>show</a>
+					<a href={`/departments/${department.id}`}>Tools</a>
         </div>
 		
       )
       
     })
-  }
+	}
   return(
     <div className="viewport-container">
       <h1 className="header"> Jon Depot</h1>

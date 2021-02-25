@@ -7,10 +7,11 @@ const Department = (props) => {
   const renderDep = () => {
     return items.map(item => {
       return(
-        <div>
+        <div className="dep-container">
           <h2>{item.name}</h2>
           <h3>${item.price}.00</h3>
           <h3>Made by {item.brand}</h3>
+					<a href= {`/departments/${id}/items/${item.id}`}>View Tool</a>
         </div>
 
       )
@@ -22,10 +23,10 @@ const Department = (props) => {
 
 	return (
 		<div>
-			<h1>{name}</h1>
-      <h1>{id}</h1>
-      <a href="/">Go Back</a>
-      {renderDep()}
+			<h1 className="header"> Jon Depot</h1>
+			<h1 className="dep-header">{name}</h1>
+      <div className= "deps-container">{renderDep()}</div>
+			<a href="/">Go Back</a>
 		</div>
 	)
 }
