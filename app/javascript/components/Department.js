@@ -11,7 +11,9 @@ const Department = (props) => {
           <h2>{item.name}</h2>
           <h3>${item.price}.00</h3>
           <h3>Made by {item.brand}</h3>
-					<a href= {`/departments/${id}/items/${item.id}`}>View Tool</a>
+					<a href={`/departments/${id}/items/${item.id}`}>View Tool</a>
+          <a href={`/departments/${id}/items/${item.id}/edit`}>Edit Tool</a>
+          <a href={`/departments/${id}/items/${item.id}`} data-method="delete">Delete Tool</a>
         </div>
 
       )
@@ -23,7 +25,10 @@ const Department = (props) => {
 		<div>
 			<h1 className="header"> Jon Depot</h1>
 			<h1 className="dep-header">{name}</h1>
-      <div className= "deps-container">{renderDep()}</div>
+      <a href={`/departments/${id}/items/new`}>Create New Tool</a>
+      <div className= "deps-container">
+        {renderDep()}
+      </div>
 			<a href="/">Go Back</a>
 		</div>
 	)
