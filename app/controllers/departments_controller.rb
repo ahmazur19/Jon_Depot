@@ -15,6 +15,7 @@ def show
 end
 
 def new
+	render component: "DepartmentNew",
 end
 
 def create
