@@ -1,3 +1,31 @@
 // Place all the styles related to the departments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.header {
+	text-align: center;
+	font-size: 3em;
+	background-color: #ee7125;
+}
+
+.viewport-container {
+	margin: auto;
+	font-family: 'Lobster', cursive;
+	color: black;
+	// background-color: orange;
+	min-height: 100vh;
+}
+
+*{
+	background-color: orange;
+}
+
+.deps-container {
+	margin: 2em;
+}
+
+.dep-container {
+	margin: 3em;
+}

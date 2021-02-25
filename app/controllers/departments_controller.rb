@@ -7,6 +7,7 @@ def index
 end
 
 def show
+	render component: "Department"
 end
 
 def new
