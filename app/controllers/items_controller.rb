@@ -1,4 +1,9 @@
 class ItemsController < ApplicationController
+
+	before_action :get_department
+	before_action :get_item, only: [:show, :update, :edit, :destroy]
+
+
 	def show
 		@department = Department.find (params[:department_id])
 
@@ -9,16 +14,19 @@ class ItemsController < ApplicationController
 	
 
 	def new
-		render component: "ItemForm"
+		render component: "ItemForm", props: {department: @department}
 	end
 
 
 	def create
+		Item.new(item_params)
+
+		redirect_to department_items_path
 	end
 
 
 	def edit
-		render component: "ItemForm"
+		render component: "ItemForm", props: {department: @department, item: @item}
 	end
 
 
@@ -30,4 +38,17 @@ class ItemsController < ApplicationController
 	end
 
 
+	private
+
+	def get_department
+		@department = Department.find(params[:department_id])
+	end
+
+	def get_item
+		@item = @department.items.find(params[:id])
+	end
+
+	def item_params
+		params.require(:item).permit(:name, :price, :brand)
+	end
 end
