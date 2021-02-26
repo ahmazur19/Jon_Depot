@@ -19,9 +19,9 @@ class ItemsController < ApplicationController
 
 
 	def create
-		item = @departments.items.new(item_params)
+		item = @department.items.create(item_params)
 
-		redirect_to department_items_path(@departments)
+		redirect_to department_path(@department)
 	end
 
 
@@ -31,6 +31,9 @@ class ItemsController < ApplicationController
 
 
 	def update
+		@item.update(item_params)
+
+		redirect_to department_item_path
 	end
 
 
