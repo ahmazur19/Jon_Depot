@@ -33,11 +33,14 @@ class ItemsController < ApplicationController
 	def update
 		@item.update(item_params)
 
-		redirect_to department_item_path
+		redirect_to department_path(@department)
 	end
 
 
 	def destroy
+		@item.destroy
+
+		redirect_to department_path(@department)
 	end
 
 
