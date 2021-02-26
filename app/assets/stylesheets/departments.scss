@@ -37,3 +37,49 @@
 .dep-container a {
 	text-decoration: none;
 }
+
+
+.form-page {
+	text-align: center;
+	font-size: 1em;
+
+}
+
+.form-page h1 {
+	font-size: 2em;
+}
+
+
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.form-contents {
+	text-align: center;
+  border: 5px solid black;
+	width: fit-content;
+	margin: 1em;
+	padding: 1em;
+	padding-top: 0;
+}
+
+.form-contents p {
+	font-size: 2.5em;
+	width: fit-content;
+}
+
+.form-contents input {
+	background: lightgray;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.form-container button {
+	font-size: 1.5em;
+	margin: 1em,
+}
