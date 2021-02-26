@@ -3,7 +3,7 @@ import React from "react";
 
 const ItemForm = (props) => {
   const {department, item} = props
-  const action = item ? `/departments/${department.id}/item/${item.id}` : `/departments/${department.id}/items`
+  const action = item ? `/departments/${department.id}/items/${item.id}` : `/departments/${department.id}/items`
   const defaultName = item ? item.name : ""
   const defaultPrice = item ? item.price : ""
   const defaultBrand = item ? item.brand : ""

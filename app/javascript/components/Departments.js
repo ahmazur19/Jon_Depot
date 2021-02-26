@@ -20,6 +20,7 @@ const Departments = (props) => {
   return(
     <div className="viewport-container">
       <h1 className="header"> Jon Depot</h1>
+			<a href= {`/departments/new`}>Create New Department</a>
       <div className="deps-container">
         {renderDeps()}
       </div>
