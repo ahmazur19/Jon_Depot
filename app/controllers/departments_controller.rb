@@ -41,6 +41,11 @@ def update
 end
 
 def destroy
+	@department = Department.find(params[:id])
+
+	@department.destroy
+
+	redirect_to root_path
 end
 
 
