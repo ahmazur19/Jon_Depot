@@ -12,7 +12,9 @@ const Item = (props) => {
 				<h2>Made by: {brand}</h2>
 			</div>
 			<a href= "/">Home</a>
+			<div>
 			<a href={`/departments/${department_id}`}>Go Back</a>
+			</div>
 		</div>
 	)
 
